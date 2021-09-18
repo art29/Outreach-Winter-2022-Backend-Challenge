@@ -21,6 +21,12 @@ Install dependencies
   npm install
 ```
 
+Create the db file
+
+```bash
+  mkdir -p tmp && touch tmp/db.sqlite3
+```
+
 Run DB migrations
 
 ```bash
