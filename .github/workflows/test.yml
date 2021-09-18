@@ -14,8 +14,6 @@ jobs:
           node-version: 16.x
       - name: Install
         run: npm install
-      - name: Copy env
-        run: cp .env.example .env
       - name: Creating DB File
         run: mkdir -p tmp && touch tmp/db.sqlite3
       - name: Migration
@@ -32,8 +30,6 @@ jobs:
           node-version: 16.x
       - name: Install
         run: npm install
-      - name: Copy env
-        run: cp .env.example .env
       - name: Creating DB File
         run: mkdir -p tmp && touch tmp/db.sqlite3
       - name: Migration
