@@ -16,6 +16,13 @@ jobs:
         run: npm install
       - name: Migration
         run: node ace migration:run
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
       - name: Run tests
         run: npm test
   windows:
@@ -30,5 +37,12 @@ jobs:
         run: npm install
       - name: Migration
         run: node ace migration:run
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
       - name: Run tests
         run: npm test
