@@ -16,6 +16,8 @@ jobs:
         run: npm install
       - name: Copy env
         run: cp .env.example .env
+      - name: Creating DB File
+        run: mkdir -p tmp && touch tmp/db.sqlite3
       - name: Migration
         run: node ace migration:run
       - name: Run tests
@@ -32,6 +34,8 @@ jobs:
         run: npm install
       - name: Copy env
         run: cp .env.example .env
+      - name: Creating DB File
+        run: mkdir -p tmp && touch tmp/db.sqlite3
       - name: Migration
         run: node ace migration:run
       - name: Run tests
