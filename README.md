@@ -2,6 +2,8 @@
 
 This assignment is an AdonisJS with TypeScript app that has 2 endpoints. It uses a SqlLite database to store data.
 
+[![test](https://github.com/art29/aes-outreach-backend-challenge/actions/workflows/test.yml/badge.svg)](https://github.com/art29/aes-outreach-backend-challenge/actions/workflows/test.yml)
+
 ## Endpoints
 
 - POST /create

@@ -15,7 +15,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Migration
-        run: node ace migration:run
+        run: node ace migration:run  --force true
         env:
           PORT: 3333
           HOST: 0.0.0.0
@@ -43,7 +43,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Migration
-        run: node ace migration:run
+        run: node ace migration:run --force true
         env:
           PORT: 3333
           HOST: 0.0.0.0
