@@ -1,0 +1,13 @@
+// import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+
+export default class CardsController {
+
+  public async create() {
+
+  }
+
+  public async validate() {
+
+  }
+
+}
