@@ -7,7 +7,7 @@ export default class Door extends BaseModel {
   public id: number
 
   @column()
-  public door_id: string
+  public door_identifier: string
 
   @manyToMany(() => AccessToken)
   public access_tokens: ManyToMany<typeof AccessToken>
