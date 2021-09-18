@@ -3,13 +3,6 @@ name: test
 on:
   - push
   - pull_request
-env:
-  PORT: 3333
-  HOST: 0.0.0.0
-  NODE_ENV: production
-  APP_KEY: ${{ secrets.APP_KEY }}
-  DRIVE_DISK: local
-  DB_CONNECTION: sqlite
 jobs:
   linux:
     runs-on: ubuntu-latest
@@ -23,8 +16,22 @@ jobs:
         run: npm install
       - name: Migration
         run: node ace migration:run
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
       - name: Run tests
         run: npm test
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
   windows:
     runs-on: windows-latest
     steps:
@@ -37,5 +44,19 @@ jobs:
         run: npm install
       - name: Migration
         run: node ace migration:run
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
       - name: Run tests
         run: npm test
+        env:
+          PORT: 3333
+          HOST: 0.0.0.0
+          NODE_ENV: production
+          APP_KEY: ${{ secrets.APP_KEY }}
+          DRIVE_DISK: local
+          DB_CONNECTION: sqlite
