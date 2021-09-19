@@ -1,13 +1,13 @@
 # Winter 2022 Interview Challenge for AES Outreach
 
-This assignment is an AdonisJS with TypeScript app that has 2 endpoints. It uses a SqlLite database to store data.
+This assignment is an [AdonisJS](https://adonisjs.com/) with TypeScript app that has 2 endpoints. It uses a SqlLite database to store data.
 
 [![test](https://github.com/art29/aes-outreach-backend-challenge/actions/workflows/test.yml/badge.svg)](https://github.com/art29/aes-outreach-backend-challenge/actions/workflows/test.yml)
 
 ## Endpoints
 
 - POST /create
-  - (Takes an array of doorIds), ex: data={doorIds: {1, 2, 3}
+  - (Takes an array of doorIds, anything that can be casted to strings), ex: data={doorIds: [1, 2, 3]
   - Returns HTTP422 if missing params, and HTTP201 with an accessToken if it works
 - POST /validate
   - (Takes a doorId and accessToken), ex: data={doorId: 1, accessToken: '5cc6d1f0-bd6f-47ec-a2d9-c82466cfffb5'}
@@ -21,7 +21,7 @@ Install dependencies
   npm install
 ```
 
-Create the db file
+Create the DB file to be able to run migrations
 
 ```bash
   mkdir -p tmp && touch tmp/db.sqlite3
